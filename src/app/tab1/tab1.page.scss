@@ -1,0 +1,30 @@
+/* Misalnya, pada file home.page.scss */
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  ion-text-center {
+    text-align: center;
+  }
+
+  ion-card-content {
+    text-align: center;
+  }
+
+  ion-title {
+    text-align: center;
+  }
+
+  ion-thumbnail {
+    width: 80px; // Sesuaikan ukuran thumbnail sesuai kebutuhan
+    height: 80px;
+  }
+  
+  ion-label {
+    padding-left: 10px; // Sesuaikan jarak antara thumbnail dan teks
+  }
+  
+  

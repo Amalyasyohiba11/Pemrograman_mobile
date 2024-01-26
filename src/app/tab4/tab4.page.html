@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Data Pasien</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+ <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content
+    pullingIcon="arrow-dropdown"
+    pullingText="Pull to refresh"
+    refreshingSpinner="circles"
+    refreshingText="Refreshing...">
+  </ion-refresher-content>
+</ion-refresher>
+
+<ion-card *ngFor="let pasien of pasiens">
+  <ion-item>
+    <ion-thumbnail slot="start">
+      <img src="assets/icon/iluser.jpg" alt="Judul Berita 1">
+    </ion-thumbnail>
+    <ion-label>
+      <ion-card-title color="success" type="light">{{pasien.nama}}</ion-card-title>
+      <p>tanggal_lahir: {{pasien.tanggal_lahir}}, alamat: {{pasien.alamat}}</p>
+      <p>nohp: {{pasien.nohp}}, email: {{pasien.email}}</p>
+      <p> klinik: {{pasien.klinik}},
+        pembayaran: {{pasien.pembayaran}}</p>
+      </ion-label>
+  </ion-item>
+
+
+  
+
+  <ion-card-content>
+   
+  </ion-card-content>
+</ion-card>
+
+
+
+<ion-infinite-scroll  (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more data...">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+</ion-content>
